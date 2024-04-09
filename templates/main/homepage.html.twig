@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title %} Starships {% endblock %}
+{% block body %}
+
+    <h1 style="text-align:center;">There is the collection of starships</h1>
+    <p style="text-align:center;">count of it is : {{ ships|length }}</p>
+    <ul>
+        {% for ship in ships %}
+            <li>Name : {{ ship.name }}</li>
+            <li>Class : {{ ship.class }}</li>
+            <li>Captain: {{ ship.captain }}</li>
+            <li>Status : {{ ship.status }}</li>
+            <br>
+        {% endfor %}
+{% endblock %}
